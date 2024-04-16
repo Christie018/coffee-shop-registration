@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Registration>;
+
+<h2>Registration List</h2>
+
+<table class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    @foreach (Registration registration in Model)
+    {
+        <tr>
+            <td>@registration.FirstName</td>
+            <td>@registration.LastName</td>
+            <td>@registration.Email</td>
+            <td>@registration.Password</td>
+            <td>
+                <a asp-controller="Registration" asp-action="Registration" asp-route-id="@registration.Id">details</a>
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Add a registration", "Create", "Registrations")
+</p>

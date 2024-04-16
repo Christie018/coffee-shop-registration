@@ -1,0 +1,15 @@
+﻿@model Registration;
+<h2>Registration Details</h2>
+
+
+<div>
+    <h3>First Name: @Model.FirstName</h3>
+    <p>LastName: @Model.LastName</p>
+    <p>Email: @Model.Email</p>
+    <p>Password: @Model.Password</p>
+</div>
+
+
+<p>
+    @Html.ActionLink("Back to Registration List", "Index", "Registration")
+</p>
